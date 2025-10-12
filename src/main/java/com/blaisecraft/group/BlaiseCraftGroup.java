@@ -1,6 +1,8 @@
-package com.blaisecraft;
+package com.blaisecraft.group;
 
 
+import com.blaisecraft.BlaiseCraft;
+import com.blaisecraft.items.BlaiseCraftItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

@@ -1,5 +1,9 @@
 {
+  "itemGroup.blaisecraft.blaise_craft": "Blaise Craft Items",
   "item.blaisecraft.labubu_item": "Labubu",
+  "itemTooltip.blaisecraft.labubu_item": "It's an overpriced doll.",
   "item.blaisecraft.aragorn_sword": "Andúril",
-  "itemTooltip.blaisecraft.aragorn_sword": "Here is the Sword that was broken and is forged again!"
+  "itemTooltip.blaisecraft.aragorn_sword": "Here is the Sword that was broken and is forged again!",
+  "item.blaisecraft.master_sword": "Master Sword",
+  "itemTooltip.blaisecraft.master_sword": "The Sword of a legendary hero."
 }

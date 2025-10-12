@@ -1,5 +1,7 @@
 package com.blaisecraft;
 
+import com.blaisecraft.group.BlaiseCraftGroup;
+import com.blaisecraft.items.BlaiseCraftItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,8 +13,9 @@ public class BlaiseCraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        BlaiseCraftGroup.registerBlaiseCraftGroups();
         BlaiseCraftItems.initialize();
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Welcome to Blaise Craft!");
 	}
 }

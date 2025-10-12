@@ -1,10 +1,12 @@
-package com.blaisecraft;
+package com.blaisecraft.items;
 
+import com.blaisecraft.BlaiseCraft;
+import com.blaisecraft.tooltip.LabubuItemTooltip;
+import com.blaisecraft.tooltip.MasterSwordTooltip;
+import com.blaisecraft.tooltip.AragornSwordTooltip;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ShieldItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

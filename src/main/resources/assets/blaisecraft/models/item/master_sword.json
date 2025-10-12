@@ -1,8 +1,6 @@
 {
-  "parent": "minecraft:item/shield",
+  "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "blaisecraft:item/hylian_shield" ,
-    "particle": "blaisecraft:item/hylian_shield",
-    "shield": "blaisecraft:item/hylian_shield"
+    "layer0": "blaisecraft:item/master_sword"
   }
 }

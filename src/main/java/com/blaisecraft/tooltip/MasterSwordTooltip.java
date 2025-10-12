@@ -1,4 +1,4 @@
-package com.blaisecraft;
+package com.blaisecraft.tooltip;
 
 import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.item.ItemStack;
