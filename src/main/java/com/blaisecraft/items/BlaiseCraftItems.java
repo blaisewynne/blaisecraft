@@ -1,24 +1,17 @@
 package com.blaisecraft;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.component.type.TooltipDisplayComponent;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.ShieldItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
-import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 
@@ -29,14 +22,21 @@ public class BlaiseCraftItems {
         Registry.register(Registries.ITEM, itemKey, item);
         return item;
     }
-    public static final Item LABUBU_ITEM = register("labubu_item", Item::new, new Item.Settings().maxCount(1).rarity(Rarity.RARE));
+    public static final Item LABUBU_ITEM = register("labubu_item", LabubuItemTooltip::new, new Item.Settings().maxCount(1).rarity(Rarity.RARE));
     public static final Item ARAGORN_SWORD = register("aragorn_sword", AragornSwordTooltip::new, new Item.Settings().sword(ToolMaterial.DIAMOND, 8f, 3f).rarity(Rarity.EPIC));
+    public static final Item MASTER_SWORD = register("master_sword",  MasterSwordTooltip::new, new Item.Settings().sword(ToolMaterial.IRON, 4f, 3f).rarity(Rarity.EPIC));
+
+
 
     public static void initialize() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL)
                 .register((entries) -> {
                     entries.add(LABUBU_ITEM);
+                });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+                .register((entries) -> {
                     entries.add(ARAGORN_SWORD);
+                    entries.add(MASTER_SWORD);
                 });
     }
 
