@@ -27,7 +27,7 @@ import java.io.ObjectInputFilter;
 public class WerewolfEffect extends StatusEffect {
     private static final Identifier SPEED_ID = Identifier.of(BlaiseCraft.MOD_ID, "werewolf");
     public WerewolfEffect() {
-        super(StatusEffectCategory.BENEFICIAL, 0xFFAA00);
+        super(StatusEffectCategory.HARMFUL, 0xFFAA00);
         addAttributeModifier(EntityAttributes.MOVEMENT_SPEED, SPEED_ID, 0.6, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL).
                 addAttributeModifier(EntityAttributes.JUMP_STRENGTH, SPEED_ID, 0.5f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL).
                 addAttributeModifier(EntityAttributes.ATTACK_SPEED, SPEED_ID, 0.9f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL).

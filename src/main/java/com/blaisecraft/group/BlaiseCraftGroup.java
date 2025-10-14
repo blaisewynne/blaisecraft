@@ -20,6 +20,7 @@ public class BlaiseCraftGroup {
                 entries.add(BlaiseCraftItems.LABUBU_ITEM);
                 entries.add(BlaiseCraftItems.ARAGORN_SWORD);
                 entries.add(BlaiseCraftItems.MASTER_SWORD);
+                entries.add(BlaiseCraftItems.BLOOD_ITEM);
             })
             .build());
     public static void registerBlaiseCraftGroups() {

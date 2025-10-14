@@ -14,6 +14,8 @@ import net.minecraft.util.Identifier;
 public class BlaiseCraftEffects implements ModInitializer {
     public static final RegistryEntry<StatusEffect> WEREWOLF =
             Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(BlaiseCraft.MOD_ID, "werewolf"), new WerewolfEffect());
+    public static final RegistryEntry<StatusEffect> VAMPIRE =
+            Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(BlaiseCraft.MOD_ID, "vampire"), new VampireEffect());
 
     @Override
     public void onInitialize() {

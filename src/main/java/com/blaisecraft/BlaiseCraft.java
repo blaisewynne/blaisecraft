@@ -19,6 +19,7 @@ public class BlaiseCraft implements ModInitializer {
         BlaiseCraftItems.initialize();
         BlaiseCraftEffects.WEREWOLF.getClass();
         BlaiseCraftPotions.WEREWOLF_POTION.getClass();
+        BlaiseCraftEffects.VAMPIRE.getClass();
 		LOGGER.info("Welcome to Blaise Craft!");
 	}
 }
