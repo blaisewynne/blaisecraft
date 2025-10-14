@@ -1,7 +1,9 @@
 package com.blaisecraft;
 
+import com.blaisecraft.effects.BlaiseCraftEffects;
 import com.blaisecraft.group.BlaiseCraftGroup;
 import com.blaisecraft.items.BlaiseCraftItems;
+import com.blaisecraft.items.BlaiseCraftPotions;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -15,7 +17,8 @@ public class BlaiseCraft implements ModInitializer {
 	public void onInitialize() {
         BlaiseCraftGroup.registerBlaiseCraftGroups();
         BlaiseCraftItems.initialize();
-
+        BlaiseCraftEffects.WEREWOLF.getClass();
+        BlaiseCraftPotions.WEREWOLF_POTION.getClass();
 		LOGGER.info("Welcome to Blaise Craft!");
 	}
 }
