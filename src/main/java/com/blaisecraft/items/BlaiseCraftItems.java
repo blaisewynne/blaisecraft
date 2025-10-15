@@ -33,7 +33,7 @@ public class BlaiseCraftItems {
         return item;
     }
 
-    public static final ConsumableComponent BLOOD_CONSUMABLE = ConsumableComponents.food().consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(BlaiseCraftEffects.VAMPIRE, 1000, 1), 1)).build();
+    public static final ConsumableComponent BLOOD_CONSUMABLE = ConsumableComponents.food().consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(BlaiseCraftEffects.VAMPIRE, 1000000, 1), 1)).build();
     public static final FoodComponent BLOOD_FOOD = new FoodComponent.Builder().alwaysEdible().saturationModifier(8).build();
 
     public static final Item LABUBU_ITEM = register("labubu_item", LabubuItemTooltip::new, new Item.Settings().maxCount(1).rarity(Rarity.RARE));
