@@ -1,17 +1,15 @@
 package com.blaisecraft.effects;
 
 import com.blaisecraft.BlaiseCraft;
-import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.network.packet.s2c.play.LightData;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
 
 public class VampireEffect extends StatusEffect {
     private static final Identifier SPEED_ID = Identifier.of(BlaiseCraft.MOD_ID, "vampire");
@@ -32,6 +30,9 @@ public class VampireEffect extends StatusEffect {
 
     @Override
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
+        if (entity instanceof PlayerEntity && world instanceof ServerWorld serverWorld) {
+            entity.damage(serverWorld, world.getDamageSources().onFire(), 1);
+        }
         return super.applyUpdateEffect(world, entity, amplifier);
     }
 }
