@@ -6,6 +6,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
@@ -34,8 +35,9 @@ public class VampireEffect extends StatusEffect {
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
 
         if (entity instanceof PlayerEntity && world instanceof ServerWorld serverWorld) {
-            if (world.isSkyVisible(BlockPos.ofFloored(entity.getX(), entity.getY(), entity.getZ())) && world.isDay()) {
+            if (world.isSkyVisible(BlockPos.ofFloored(entity.getX(), entity.getY(), entity.getZ())) && world.isDay() && !world.isRaining() && !world.isThundering()) {
                 entity.damage(serverWorld, world.getDamageSources().onFire(), 1);
+                entity.isInvulnerableTo(serverWorld, world.getDamageSources().magic());
             }
         }
         return super.applyUpdateEffect(world, entity, amplifier);

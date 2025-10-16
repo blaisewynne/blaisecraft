@@ -1,11 +1,16 @@
 package com.blaisecraft.effects;
 
 import com.blaisecraft.BlaiseCraft;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 
 
 public class WerewolfEffect extends StatusEffect {
@@ -22,4 +27,18 @@ public class WerewolfEffect extends StatusEffect {
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         return true;
     }
+
+    @Override
+    public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
+
+        if (entity instanceof PlayerEntity && world instanceof ServerWorld serverWorld) {
+           int moon = world.getMoonPhase();
+           if (moon == 0) {
+               ((PlayerEntity) entity).sendMessage(Text.of("§7It's a full moon.."), true);
+               ((PlayerEntity) entity).sendMessage(Text.of("§4You turn into a ravenous werewolf!"), false);
+           }
+        }
+        return super.applyUpdateEffect(world, entity, amplifier);
+    }
+
 }
