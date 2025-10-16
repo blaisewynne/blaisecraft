@@ -10,6 +10,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
 
 public class VampireEffect extends StatusEffect {
     private static final Identifier SPEED_ID = Identifier.of(BlaiseCraft.MOD_ID, "vampire");
@@ -30,8 +32,11 @@ public class VampireEffect extends StatusEffect {
 
     @Override
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
+
         if (entity instanceof PlayerEntity && world instanceof ServerWorld serverWorld) {
-            entity.damage(serverWorld, world.getDamageSources().onFire(), 1);
+            if (world.isSkyVisible(BlockPos.ofFloored(entity.getX(), entity.getY(), entity.getZ())) && world.isDay()) {
+                entity.damage(serverWorld, world.getDamageSources().onFire(), 1);
+            }
         }
         return super.applyUpdateEffect(world, entity, amplifier);
     }
