@@ -21,6 +21,7 @@ public class BlaiseCraftGroup {
                 entries.add(BlaiseCraftItems.ARAGORN_SWORD);
                 entries.add(BlaiseCraftItems.MASTER_SWORD);
                 entries.add(BlaiseCraftItems.BLOOD_ITEM);
+                entries.add(BlaiseCraftItems.DUBAI_CHOCOLATE)
             })
             .build());
     public static void registerBlaiseCraftGroups() {
