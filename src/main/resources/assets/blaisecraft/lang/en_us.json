@@ -13,5 +13,7 @@
   "effect.blaisecraft.werewolf": "Lycanthropy",
   "item.blaisecraft.blood_item": "Bloody Tears",
   "itemTooltip.blaisecraft.blood_item": "You can hear the trapped souls inside.",
-  "effect.blaisecraft.vampire": "Vampirism"
+  "effect.blaisecraft.vampire": "Vampirism",
+  "item.blaisecraft.dubai_chocolate": "Dubai Chocolate",
+  "itemTooltip.blaisecraft.dubai_chocolate": "Delicious."
 }

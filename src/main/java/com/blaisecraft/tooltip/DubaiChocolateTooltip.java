@@ -9,14 +9,14 @@ import net.minecraft.util.Formatting;
 
 import java.util.function.Consumer;
 
-public class BloodItemTooltip extends Item {
-    public BloodItemTooltip(Settings settings) {
+public class DubaiChocolateTooltip extends Item {
+    public DubaiChocolateTooltip(Settings settings) {
         super(settings);
     }
 
     @SuppressWarnings("depreciation")
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
-        textConsumer.accept(Text.translatable("itemTooltip.blaisecraft.blood_item").formatted(Formatting.LIGHT_PURPLE, Formatting.ITALIC));
+        textConsumer.accept(Text.translatable("itemTooltip.blaisecraft.dubai_chocolate").formatted(Formatting.DARK_GRAY, Formatting.ITALIC));
     }
 }
