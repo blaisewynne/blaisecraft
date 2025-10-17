@@ -17,6 +17,6 @@ public class DubaiChocolateTooltip extends Item {
     @SuppressWarnings("depreciation")
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
-        textConsumer.accept(Text.translatable("itemTooltip.blaisecraft.dubai_chocolate").formatted(Formatting.DARK_GRAY, Formatting.ITALIC));
+        textConsumer.accept(Text.translatable("itemTooltip.blaisecraft.dubai_chocolate").formatted(Formatting.LIGHT_PURPLE, Formatting.ITALIC));
     }
 }

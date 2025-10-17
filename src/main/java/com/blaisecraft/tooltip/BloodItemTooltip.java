@@ -17,6 +17,6 @@ public class BloodItemTooltip extends Item {
     @SuppressWarnings("depreciation")
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
-        textConsumer.accept(Text.translatable("itemTooltip.blaisecraft.blood_item").formatted(Formatting.LIGHT_PURPLE, Formatting.ITALIC));
+        textConsumer.accept(Text.translatable("itemTooltip.blaisecraft.blood_item").formatted(Formatting.DARK_GRAY, Formatting.ITALIC));
     }
 }
