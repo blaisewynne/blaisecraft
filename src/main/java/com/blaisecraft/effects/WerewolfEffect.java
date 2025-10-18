@@ -27,8 +27,7 @@ public class WerewolfEffect extends StatusEffect {
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
 
         if (entity instanceof PlayerEntity && world instanceof ServerWorld serverWorld) {
-           int moon = world.getMoonPhase();
-           if (moon == 0 && world.isNight()) {
+           if (world.getMoonPhase() == 0 && world.isNight()) {
                addAttributeModifier(EntityAttributes.JUMP_STRENGTH, SPEED_ID, 0.8, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
                addAttributeModifier(EntityAttributes.ATTACK_SPEED, SPEED_ID, 3, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
                addAttributeModifier(EntityAttributes.SAFE_FALL_DISTANCE, SPEED_ID, 12, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
