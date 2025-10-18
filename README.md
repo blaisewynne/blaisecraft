@@ -4,6 +4,7 @@ The mod current adds all sort of random items to the game. Such as:
 #### - Labubu
 #### - Vampirism
 #### - Lycanthropy
+#### - Dubai Chocolate (added by the goat @ethandakin)
 
 ## Installation
 
@@ -13,3 +14,4 @@ The mod current adds all sort of random items to the game. Such as:
 ##### `./gradlew build`
 ### After building, check the *builds* folder and find the .jar file (The one with -dev can be ignored)
 ### Then deploy onto your Minecraft Mod folder and enjoy!
+
