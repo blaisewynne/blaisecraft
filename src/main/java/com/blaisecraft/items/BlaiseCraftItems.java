@@ -33,7 +33,7 @@ public class BlaiseCraftItems {
         return item;
     }
 
-    public static final ConsumableComponent BLOOD_CONSUMABLE = ConsumableComponents.food().consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(BlaiseCraftEffects.VAMPIRE, 1000000, 1), 1)).build();
+    public static final ConsumableComponent BLOOD_CONSUMABLE = ConsumableComponents.food().consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(BlaiseCraftEffects.VAMPIRE, Integer.MAX_VALUE, 0), 1)).build();
     public static final FoodComponent BLOOD_FOOD = new FoodComponent.Builder().alwaysEdible().saturationModifier(8).build();
     public static final FoodComponent DUBAI_CHOCOLATE_FOOD = new FoodComponent.Builder().alwaysEdible().saturationModifier(16).build();
 

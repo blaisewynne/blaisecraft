@@ -43,11 +43,7 @@ public class VampireEffect extends StatusEffect {
             if (world.isSkyVisible(BlockPos.ofFloored(entity.getX(), entity.getY(), entity.getZ())) && world.isDay() && !world.isRaining() && !world.isThundering()) {
                 entity.damage(serverWorld, world.getDamageSources().onFire(), 1);
             }
-        }
-
-        if (entity instanceof PlayerEntity && world instanceof ServerWorld serverWorld) {
             BlockState state = ((PlayerEntity) entity).getEntityWorld().getBlockState(entity.getBlockPos());
-            ((PlayerEntity) entity).sendMessage(Text.of(state.toString()), true);
             for (int i = 1; i < 10; i++) {
                 if (Objects.equals(state.toString(), String.format("Block{minecraft:water}[level=%d]", i))) {
                     entity.damage(serverWorld, world.getDamageSources().onFire(), 2);
