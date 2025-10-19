@@ -1,6 +1,9 @@
 package com.blaisecraft.effects;
 
 import com.blaisecraft.BlaiseCraft;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.FluidBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -13,6 +16,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
+
+import java.util.Objects;
 
 public class VampireEffect extends StatusEffect {
     private static final Identifier SPEED_ID = Identifier.of(BlaiseCraft.MOD_ID, "vampire");
@@ -37,7 +42,16 @@ public class VampireEffect extends StatusEffect {
         if (entity instanceof PlayerEntity && world instanceof ServerWorld serverWorld) {
             if (world.isSkyVisible(BlockPos.ofFloored(entity.getX(), entity.getY(), entity.getZ())) && world.isDay() && !world.isRaining() && !world.isThundering()) {
                 entity.damage(serverWorld, world.getDamageSources().onFire(), 1);
-                entity.isInvulnerableTo(serverWorld, world.getDamageSources().magic());
+            }
+        }
+
+        if (entity instanceof PlayerEntity && world instanceof ServerWorld serverWorld) {
+            BlockState state = ((PlayerEntity) entity).getEntityWorld().getBlockState(entity.getBlockPos());
+            ((PlayerEntity) entity).sendMessage(Text.of(state.toString()), true);
+            for (int i = 1; i < 10; i++) {
+                if (Objects.equals(state.toString(), String.format("Block{minecraft:water}[level=%d]", i))) {
+                    entity.damage(serverWorld, world.getDamageSources().onFire(), 2);
+                }
             }
         }
         return super.applyUpdateEffect(world, entity, amplifier);
