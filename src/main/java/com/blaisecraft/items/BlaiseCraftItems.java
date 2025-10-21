@@ -5,7 +5,6 @@ import com.blaisecraft.effects.BlaiseCraftEffects;
 import com.blaisecraft.tooltip.BloodItemTooltip;
 import com.blaisecraft.tooltip.DubaiChocolateTooltip;
 import com.blaisecraft.tooltip.LabubuItemTooltip;
-import com.blaisecraft.tooltip.MasterSwordTooltip;
 import com.blaisecraft.tooltip.AragornSwordTooltip;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.type.ConsumableComponent;
@@ -33,14 +32,13 @@ public class BlaiseCraftItems {
         return item;
     }
 
-    public static final ConsumableComponent BLOOD_CONSUMABLE = ConsumableComponents.food().consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(BlaiseCraftEffects.VAMPIRE, Integer.MAX_VALUE, 0), 1)).build();
+    public static final ConsumableComponent BLOOD_CONSUMABLE = ConsumableComponents.food().consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(BlaiseCraftEffects.VAMPIRE, 0, 0), 1)).build();
     public static final FoodComponent BLOOD_FOOD = new FoodComponent.Builder().alwaysEdible().saturationModifier(8).build();
     public static final FoodComponent DUBAI_CHOCOLATE_FOOD = new FoodComponent.Builder().alwaysEdible().saturationModifier(16).build();
 
     public static final Item LABUBU_ITEM = register("labubu_item", LabubuItemTooltip::new, new Item.Settings().maxCount(1).rarity(Rarity.RARE));
     public static final Item BLOOD_ITEM = register("blood_item", BloodItemTooltip::new, new Item.Settings().food(BLOOD_FOOD, BLOOD_CONSUMABLE).maxCount(16));
     public static final Item ARAGORN_SWORD = register("aragorn_sword", AragornSwordTooltip::new, new Item.Settings().sword(ToolMaterial.DIAMOND, 8f, 3f).rarity(Rarity.EPIC));
-    public static final Item MASTER_SWORD = register("master_sword",  MasterSwordTooltip::new, new Item.Settings().sword(ToolMaterial.IRON, 4f, 3f).rarity(Rarity.EPIC));
     public static final Item DUBAI_CHOCOLATE = register("dubai_chocolate", DubaiChocolateTooltip::new, new Item.Settings().food(DUBAI_CHOCOLATE_FOOD).maxCount(1));
 
 
@@ -54,7 +52,6 @@ public class BlaiseCraftItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
                 .register((entries) -> {
                     entries.add(ARAGORN_SWORD);
-                    entries.add(MASTER_SWORD);
                 });
     }
 
