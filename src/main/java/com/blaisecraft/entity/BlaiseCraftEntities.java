@@ -1,4 +1,4 @@
-package com.blaisecraft.entity.custom.client;
+package com.blaisecraft.entity;
 
 public class BlaiseCraftEntities {
 }
