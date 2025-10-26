@@ -1,9 +1,7 @@
 package com.blaisecraft.group;
 import com.blaisecraft.BlaiseCraft;
 import com.blaisecraft.items.BlaiseCraftItems;
-import com.blaisecraft.items.BlaiseCraftPotions;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
