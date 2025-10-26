@@ -49,7 +49,6 @@ public class VampireEffect extends StatusEffect {
                     entity.damage(serverWorld, world.getDamageSources().onFire(), 2);
                 }
             }
-            
         }
         return super.applyUpdateEffect(world, entity, amplifier);
     }

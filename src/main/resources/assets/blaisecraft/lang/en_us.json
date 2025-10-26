@@ -1,0 +1,13 @@
+{
+  "itemGroup.blaisecraft.blaise_craft": "Blaise Craft Items",
+  "item.blaisecraft.labubu_item": "Labubu",
+  "itemTooltip.blaisecraft.labubu_item": "It's an overpriced doll.",
+  "item.blaisecraft.blood_item": "Bloody Tears",
+  "itemTooltip.blaisecraft.blood_item": "You can hear the trapped souls inside.",
+  "effect.blaisecraft.vampire": "Vampirism",
+  "item.minecraft.potion.effect.werewolf": "Potion of Lycanthropy",
+  "item.minecraft.splash_potion.effect.werewolf": "Splash Potion of Lycanthropy",
+  "item.minecraft.lingering_potion.effect.werewolf": "Lingering Potion of Lycanthropy",
+  "item.minecraft.tipped_arrow.effect.werewolf": "Arrow of Lycanthropy",
+  "effect.blaisecraft.werewolf": "Lycanthropy"
+}

@@ -16,6 +16,6 @@ public class BlaiseCraftEffects implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        // ...
+
     }
 }

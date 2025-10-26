@@ -3,14 +3,13 @@
 	"id": "blaisecraft",
 	"version": "${version}",
 	"name": "BlaiseCraft",
-	"description": "This is a mod made by Blaise Wynne",
+	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Blaise Wynne: https://github.com/blaisewynne",
-        "Ethan Dakin: https://github.com/ethandakin"
+		"Me!"
 	],
 	"contact": {
-		"homepage": "https://blaisewynne.github.io",
-		"sources": "https://github.com/blaisewynne/blaisecraft"
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/blaisecraft/icon.png",
@@ -19,16 +18,12 @@
 		"main": [
 			"com.blaisecraft.BlaiseCraft"
 		],
-		"client": [
-			"com.blaisecraft.BlaiseCraftClient"
+		"fabric-datagen": [
+			"com.blaisecraft.BlaiseCraftDataGenerator"
 		]
 	},
 	"mixins": [
-		"blaisecraft.mixins.json",
-		{
-			"config": "blaisecraft.client.mixins.json",
-			"environment": "client"
-		}
+		"blaisecraft.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.17.3",
