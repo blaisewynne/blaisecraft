@@ -9,5 +9,6 @@
   "item.minecraft.splash_potion.effect.werewolf": "Splash Potion of Lycanthropy",
   "item.minecraft.lingering_potion.effect.werewolf": "Lingering Potion of Lycanthropy",
   "item.minecraft.tipped_arrow.effect.werewolf": "Arrow of Lycanthropy",
-  "effect.blaisecraft.werewolf": "Lycanthropy"
+  "effect.blaisecraft.werewolf": "Lycanthropy",
+  "entity.blaisecraft.vampire": "Vampire"
 }

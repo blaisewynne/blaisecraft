@@ -11,8 +11,5 @@ public class BlaiseCraftClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         EntityRendererRegistry.register(BlaiseCraftEntities.VAMPIRE, VampireRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(VampireModel.VAMPIRE, VampireModel::getTexturedModelData);
-
-
     }
 }

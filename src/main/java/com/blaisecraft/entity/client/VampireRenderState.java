@@ -1,8 +1,10 @@
 package com.blaisecraft.entity.client;
 
-import net.minecraft.client.render.entity.state.LivingEntityRenderState;
-import net.minecraft.entity.AnimationState;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.render.entity.state.BipedEntityRenderState;
 
-public class VampireRenderState extends LivingEntityRenderState {
-    public final AnimationState idleAnimationState = new AnimationState();
+@Environment(EnvType.CLIENT)
+public class VampireRenderState extends BipedEntityRenderState {
+    public boolean attacking;
 }
