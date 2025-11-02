@@ -10,5 +10,6 @@
   "item.minecraft.lingering_potion.effect.werewolf": "Lingering Potion of Lycanthropy",
   "item.minecraft.tipped_arrow.effect.werewolf": "Arrow of Lycanthropy",
   "effect.blaisecraft.werewolf": "Lycanthropy",
-  "entity.blaisecraft.vampire": "Vampire"
+  "entity.blaisecraft.vampire": "Vampire",
+  "sound.blaisecraft.vampire_noise": "Vampire Noise"
 }

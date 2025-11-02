@@ -1,6 +1,8 @@
 package com.blaisecraft.entity.custom;
 
 import com.blaisecraft.entity.ai.VampireAttackGoal;
+import com.blaisecraft.sounds.BlaiseCraftSounds;
+import net.minecraft.client.sound.Sound;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
@@ -91,7 +93,11 @@ public class VampireEntity extends HostileEntity {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_WARDEN_HURT;
+        return BlaiseCraftSounds.VAMPIRE_AMBIENT;
     }
 
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return BlaiseCraftSounds.VAMPIRE_AMBIENT;
+    }
 }

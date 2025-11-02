@@ -6,6 +6,7 @@ import com.blaisecraft.entity.custom.VampireEntity;
 import com.blaisecraft.group.BlaiseCraftGroup;
 import com.blaisecraft.items.BlaiseCraftItems;
 import com.blaisecraft.items.BlaiseCraftPotions;
+import com.blaisecraft.sounds.BlaiseCraftSounds;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
@@ -38,5 +39,6 @@ public class BlaiseCraft implements ModInitializer {
             list.add(Text.translatable("item.blaisecraft.blood_item.tooltip").formatted(Formatting.RED, Formatting.BOLD));
         });
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.VAMPIRE, VampireEntity.createAttributes());
+        BlaiseCraftSounds.initialize();
 	}
 }
