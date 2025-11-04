@@ -4,16 +4,21 @@ import com.blaisecraft.entity.ai.VampireAttackGoal;
 import com.blaisecraft.sounds.BlaiseCraftSounds;
 import net.minecraft.client.sound.Sound;
 import net.minecraft.entity.AnimationState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.MerchantEntity;
 import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
@@ -99,5 +104,19 @@ public class VampireEntity extends HostileEntity {
     @Override
     protected SoundEvent getAmbientSound() {
         return BlaiseCraftSounds.VAMPIRE_AMBIENT;
+    }
+
+    @Override
+    public boolean tryAttack(ServerWorld world, Entity target) {
+        if (!super.tryAttack(world, target)) {
+            return false;
+        } else {
+            if (target instanceof LivingEntity) {
+                ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200), this);
+                ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200), this);
+            }
+
+            return true;
+        }
     }
 }
