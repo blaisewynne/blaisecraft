@@ -41,7 +41,6 @@ public class VampireEntity extends HostileEntity {
 
     protected void initCustomGoals() {
         this.goalSelector.add(2, new VampireAttackGoal(this, 1.0, false));
-
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0));
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, MerchantEntity.class, false));
@@ -119,4 +118,10 @@ public class VampireEntity extends HostileEntity {
             return true;
         }
     }
+
+    @Override
+    protected int getExperienceToDrop(ServerWorld world) {
+        return super.getExperienceToDrop(world);
+    }
+
 }
