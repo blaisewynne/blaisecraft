@@ -14,7 +14,5 @@ public abstract class AbstractVampireModel<S extends VampireRenderState> extends
 
     public void setAngles(S vampireRenderState) {
         super.setAngles(vampireRenderState);
-        float f = vampireRenderState.handSwingProgress;
-        ArmPosing.zombieArms(this.leftArm, this.rightArm, vampireRenderState.attacking, f, vampireRenderState.age);
     }
 }

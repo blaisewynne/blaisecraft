@@ -34,20 +34,17 @@ public class VampireEntity extends HostileEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
-        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
-        this.goalSelector.add(8, new LookAroundGoal(this));
         this.initCustomGoals();
     }
 
     protected void initCustomGoals() {
         this.goalSelector.add(2, new VampireAttackGoal(this, 1.0, false));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
-        this.targetSelector.add(3, new ActiveTargetGoal<>(this, MerchantEntity.class, false));
-        this.targetSelector.add(3, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
-        this.targetSelector.add(5, new ActiveTargetGoal<>(this, TurtleEntity.class, 10, true, false, TurtleEntity.BABY_TURTLE_ON_LAND_FILTER));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(4, new ActiveTargetGoal<>(this, MerchantEntity.class, false));
+        this.targetSelector.add(5, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
+        this.targetSelector.add(6, new ActiveTargetGoal<>(this, TurtleEntity.class, 10, true, false, TurtleEntity.BABY_TURTLE_ON_LAND_FILTER));
     }
-
 
     public static DefaultAttributeContainer.Builder createAttributes() {
         return HostileEntity.createHostileAttributes()
@@ -55,7 +52,7 @@ public class VampireEntity extends HostileEntity {
                 .add(EntityAttributes.MOVEMENT_SPEED, 0.35f)
                 .add(EntityAttributes.ATTACK_DAMAGE, 6.0)
                 .add(EntityAttributes.ARMOR, 4.0)
-                .add(EntityAttributes.JUMP_STRENGTH, 0.9f)
+                .add(EntityAttributes.JUMP_STRENGTH, 0.6f)
                 .add(EntityAttributes.SPAWN_REINFORCEMENTS);
     }
 
@@ -81,10 +78,7 @@ public class VampireEntity extends HostileEntity {
         if (this.isAlive()) {
             boolean bl = this.burnsInDaylight() && this.isAffectedByDaylight();
             if (bl) {
-
-                if (bl) {
-                    this.setOnFireFor(8.0F);
-                }
+                this.setOnFireFor(8.0F);
             }
         }
 
