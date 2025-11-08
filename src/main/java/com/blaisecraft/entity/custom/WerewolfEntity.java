@@ -90,12 +90,12 @@ public class WerewolfEntity extends HostileEntity {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return BlaiseCraftSounds.VAMPIRE_AMBIENT;
+        return BlaiseCraftSounds.WEREWOLF_HURT;
     }
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return BlaiseCraftSounds.VAMPIRE_AMBIENT;
+        return BlaiseCraftSounds.WEREWOLF_AMBIENT;
     }
 
     @Override
@@ -104,8 +104,7 @@ public class WerewolfEntity extends HostileEntity {
             return false;
         } else {
             if (target instanceof LivingEntity) {
-                ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200), this);
-                ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200), this);
+                ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200), this);
             }
 
             return true;

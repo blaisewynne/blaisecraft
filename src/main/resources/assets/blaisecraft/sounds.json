@@ -4,5 +4,17 @@
     "sounds": [
       "blaisecraft:vampire_noise"
     ]
+  },
+  "werewolf_ambient": {
+    "subtitle": "sound.blaisecraft.werewolf_ambient",
+    "sounds": [
+      "blaisecraft:werewolf_ambient"
+    ]
+  },
+  "werewolf_hurt": {
+    "subtitle": "sound.blaisecraft.werewolf_hurt",
+    "sounds": [
+      "blaisecraft:werewolf_hurt"
+    ]
   }
 }

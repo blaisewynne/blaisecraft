@@ -11,11 +11,15 @@ public class BlaiseCraftSounds {
     }
 
     public static final SoundEvent VAMPIRE_AMBIENT = registerSound("vampire_noise");
+    public static final SoundEvent WEREWOLF_AMBIENT = registerSound("werewolf_ambient");
+    public static final SoundEvent WEREWOLF_HURT = registerSound("werewolf_hurt");
+  
 
     private static SoundEvent registerSound(String id) {
         Identifier identifier = Identifier.of(BlaiseCraft.MOD_ID, id);
         return Registry.register(Registries.SOUND_EVENT, identifier, SoundEvent.of(identifier));
     }
+
 
     public static void initialize() {
 

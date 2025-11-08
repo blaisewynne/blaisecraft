@@ -12,5 +12,7 @@
   "effect.blaisecraft.werewolf": "Lycanthropy",
   "entity.blaisecraft.vampire": "Vampire",
   "sound.blaisecraft.vampire_noise": "Vampire Noise",
-  "entity.blaisecraft.werewolf": "Werewolf"
+  "entity.blaisecraft.werewolf": "Werewolf",
+  "sound.blaisecraft.werewolf_ambient": "Werewolf Growl",
+  "sound.blaisecraft.werewolf_hurt": "Werewolf Hurt"
 }
