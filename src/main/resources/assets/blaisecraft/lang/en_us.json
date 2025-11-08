@@ -11,5 +11,6 @@
   "item.minecraft.tipped_arrow.effect.werewolf": "Arrow of Lycanthropy",
   "effect.blaisecraft.werewolf": "Lycanthropy",
   "entity.blaisecraft.vampire": "Vampire",
-  "sound.blaisecraft.vampire_noise": "Vampire Noise"
+  "sound.blaisecraft.vampire_noise": "Vampire Noise",
+  "entity.blaisecraft.werewolf": "Werewolf"
 }

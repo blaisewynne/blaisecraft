@@ -3,6 +3,7 @@ package com.blaisecraft;
 import com.blaisecraft.effects.BlaiseCraftEffects;
 import com.blaisecraft.entity.BlaiseCraftEntities;
 import com.blaisecraft.entity.custom.VampireEntity;
+import com.blaisecraft.entity.custom.WerewolfEntity;
 import com.blaisecraft.group.BlaiseCraftGroup;
 import com.blaisecraft.items.BlaiseCraftItems;
 import com.blaisecraft.items.BlaiseCraftPotions;
@@ -39,6 +40,7 @@ public class BlaiseCraft implements ModInitializer {
             list.add(Text.translatable("item.blaisecraft.blood_item.tooltip").formatted(Formatting.RED, Formatting.BOLD));
         });
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.VAMPIRE, VampireEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.WEREWOLF, WerewolfEntity.createAttributes());
         BlaiseCraftSounds.initialize();
 	}
 }
