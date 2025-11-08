@@ -1,4 +1,4 @@
-package com.blaisecraft.entity.client;
+package com.blaisecraft.entity.client.vampire;
 
 import com.blaisecraft.BlaiseCraft;
 import com.blaisecraft.entity.custom.VampireEntity;

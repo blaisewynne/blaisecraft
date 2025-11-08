@@ -1,9 +1,8 @@
-package com.blaisecraft.entity.client;
+package com.blaisecraft.entity.client.vampire;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.ModelPart;
-import net.minecraft.client.render.entity.model.ArmPosing;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 
 @Environment(EnvType.CLIENT)

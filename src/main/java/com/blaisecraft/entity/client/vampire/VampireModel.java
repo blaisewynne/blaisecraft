@@ -1,4 +1,4 @@
-package com.blaisecraft.entity.client;
+package com.blaisecraft.entity.client.vampire;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

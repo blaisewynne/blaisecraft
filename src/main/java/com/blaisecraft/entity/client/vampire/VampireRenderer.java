@@ -1,22 +1,12 @@
-package com.blaisecraft.entity.client;
+package com.blaisecraft.entity.client.vampire;
 
-import com.blaisecraft.BlaiseCraft;
 import com.blaisecraft.entity.custom.VampireEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.EntityRendererFactory;
-import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.client.render.entity.ZombieBaseEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.render.entity.model.EquipmentModelData;
-import net.minecraft.client.render.entity.model.ZombieEntityModel;
-import net.minecraft.client.render.entity.state.ZombieEntityRenderState;
-import net.minecraft.client.render.state.CameraRenderState;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.mob.ZombieEntity;
-import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class VampireRenderer extends VampireBaseRenderer<VampireEntity, VampireRenderState, VampireModel<VampireRenderState>> {
