@@ -2,6 +2,7 @@ package com.blaisecraft;
 
 import com.blaisecraft.effects.BlaiseCraftEffects;
 import com.blaisecraft.entity.BlaiseCraftEntities;
+import com.blaisecraft.entity.custom.BeholderEntity;
 import com.blaisecraft.entity.custom.VampireEntity;
 import com.blaisecraft.entity.custom.WerewolfEntity;
 import com.blaisecraft.group.BlaiseCraftGroup;
@@ -41,6 +42,7 @@ public class BlaiseCraft implements ModInitializer {
         });
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.VAMPIRE, VampireEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.WEREWOLF, WerewolfEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.BEHOLDER, BeholderEntity.createAttributes());
         BlaiseCraftSounds.initialize();
 	}
 }

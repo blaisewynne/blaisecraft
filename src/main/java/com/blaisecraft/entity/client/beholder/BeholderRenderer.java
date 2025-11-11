@@ -1,5 +1,6 @@
-package com.blaisecraft.entity.client.vampire;
+package com.blaisecraft.entity.client.beholder;
 
+import com.blaisecraft.entity.custom.BeholderEntity;
 import com.blaisecraft.entity.custom.VampireEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -9,16 +10,16 @@ import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.render.entity.model.EquipmentModelData;
 
 @Environment(EnvType.CLIENT)
-public class VampireRenderer extends VampireBaseRenderer<VampireEntity, VampireRenderState, VampireModel<VampireRenderState>> {
-    public VampireRenderer(EntityRendererFactory.Context context) {
+public class BeholderRenderer extends BeholderBaseRenderer<BeholderEntity, BeholderRenderState, BeholderModel<BeholderRenderState>> {
+    public BeholderRenderer(EntityRendererFactory.Context context) {
         this(context, EntityModelLayers.ZOMBIE, EntityModelLayers.ZOMBIE_BABY, EntityModelLayers.ZOMBIE_EQUIPMENT, EntityModelLayers.ZOMBIE_BABY_EQUIPMENT);
     }
 
-    public VampireRenderState createRenderState() {
-        return new VampireRenderState();
+    public BeholderRenderState createRenderState() {
+        return new BeholderRenderState();
     }
 
-    public VampireRenderer(
+    public BeholderRenderer(
             EntityRendererFactory.Context ctx,
             EntityModelLayer layer,
             EntityModelLayer legsArmorLayer,
@@ -27,10 +28,10 @@ public class VampireRenderer extends VampireBaseRenderer<VampireEntity, VampireR
     ) {
         super(
                 ctx,
-                new VampireModel<>(ctx.getPart(layer)),
-                new VampireModel<>(ctx.getPart(legsArmorLayer)),
-                EquipmentModelData.mapToEntityModel(equipmentModelData, ctx.getEntityModels(), VampireModel::new),
-                EquipmentModelData.mapToEntityModel(equipmentModelData2, ctx.getEntityModels(), VampireModel::new)
+                new BeholderModel<>(ctx.getPart(layer)),
+                new BeholderModel<>(ctx.getPart(legsArmorLayer)),
+                EquipmentModelData.mapToEntityModel(equipmentModelData, ctx.getEntityModels(), BeholderModel::new),
+                EquipmentModelData.mapToEntityModel(equipmentModelData2, ctx.getEntityModels(), BeholderModel::new)
         );
     }
 }

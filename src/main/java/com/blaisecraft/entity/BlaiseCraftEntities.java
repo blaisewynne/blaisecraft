@@ -2,6 +2,7 @@ package com.blaisecraft.entity;
 import com.blaisecraft.BlaiseCraft;
 
 
+import com.blaisecraft.entity.custom.BeholderEntity;
 import com.blaisecraft.entity.custom.VampireEntity;
 
 
@@ -34,6 +35,10 @@ public class BlaiseCraftEntities implements ModInitializer  {
 
     private static final RegistryKey<EntityType<?>> WEREWOLF_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "werewolf"));
     public static final EntityType<WerewolfEntity> WEREWOLF = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "werewolf"), EntityType.Builder.create(WerewolfEntity::new, SpawnGroup.MONSTER).dimensions(1f, 2.5f).build(WEREWOLF_KEY));
+
+    private static final RegistryKey<EntityType<?>> BEHOLDER_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "beholder"));
+    public static final EntityType<BeholderEntity> BEHOLDER = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "beholder"), EntityType.Builder.create(BeholderEntity::new, SpawnGroup.MONSTER).dimensions(1f, 2.5f).build(BEHOLDER_KEY));
+
 
     @Override
     public void onInitialize() {

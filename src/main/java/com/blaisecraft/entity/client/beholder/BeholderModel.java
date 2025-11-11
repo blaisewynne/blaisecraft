@@ -1,12 +1,12 @@
-package com.blaisecraft.entity.client.vampire;
+package com.blaisecraft.entity.client.beholder;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.model.*;
+import net.minecraft.client.model.ModelPart;
 
 @Environment(EnvType.CLIENT)
-public class VampireModel<S extends VampireRenderState> extends AbstractVampireModel<S> {
-    public VampireModel(ModelPart modelPart) {
+public class BeholderModel<S extends BeholderRenderState> extends AbstractBeholderModel<S> {
+    public BeholderModel(ModelPart modelPart) {
         super(modelPart);
     }
 }
