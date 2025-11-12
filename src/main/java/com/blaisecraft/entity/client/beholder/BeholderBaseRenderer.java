@@ -26,7 +26,7 @@ public abstract class BeholderBaseRenderer<T extends BeholderEntity, S extends B
         super(context, model, shadowRadius);
     }
 
-    public Identifier getTexture(S zombieEntityRenderState) {
+    public Identifier getTexture(S beholderEntityRenderState) {
         return TEXTURE;
     }
 

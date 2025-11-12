@@ -2,6 +2,7 @@ package com.blaisecraft.entity;
 import com.blaisecraft.BlaiseCraft;
 
 
+import com.blaisecraft.entity.custom.AnimatedArmourEntity;
 import com.blaisecraft.entity.custom.BeholderEntity;
 import com.blaisecraft.entity.custom.VampireEntity;
 
@@ -39,6 +40,9 @@ public class BlaiseCraftEntities implements ModInitializer  {
     private static final RegistryKey<EntityType<?>> BEHOLDER_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "beholder"));
     public static final EntityType<BeholderEntity> BEHOLDER = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "beholder"), EntityType.Builder.create(BeholderEntity::new, SpawnGroup.MONSTER).dimensions(1f, 2.5f).build(BEHOLDER_KEY));
 
+
+    private static final RegistryKey<EntityType<?>> ANIMATED_ARMOUR_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "animated_armour"));
+    public static final EntityType<AnimatedArmourEntity> ANIMATED_ARMOUR = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "animated_armour"), EntityType.Builder.create(AnimatedArmourEntity::new, SpawnGroup.MONSTER).dimensions(1f, 2.5f).build(ANIMATED_ARMOUR_KEY));
 
     @Override
     public void onInitialize() {

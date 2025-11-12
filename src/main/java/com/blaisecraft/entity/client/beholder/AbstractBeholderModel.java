@@ -11,7 +11,7 @@ public abstract class AbstractBeholderModel<S extends BeholderRenderState> exten
         super(modelPart);
     }
 
-    public void setAngles(S vampireRenderState) {
-        super.setAngles(vampireRenderState);
+    public void setAngles(S beholderRenderState) {
+        super.setAngles(beholderRenderState);
     }
 }

@@ -43,6 +43,7 @@ public class BlaiseCraft implements ModInitializer {
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.VAMPIRE, VampireEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.WEREWOLF, WerewolfEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.BEHOLDER, BeholderEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.ANIMATED_ARMOUR, BeholderEntity.createAttributes());
         BlaiseCraftSounds.initialize();
 	}
 }

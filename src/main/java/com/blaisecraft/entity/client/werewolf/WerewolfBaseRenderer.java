@@ -26,7 +26,7 @@ public abstract class WerewolfBaseRenderer<T extends WerewolfEntity, S extends W
         super(context, model, shadowRadius);
     }
 
-    public Identifier getTexture(S zombieEntityRenderState) {
+    public Identifier getTexture(S werewolfEntityRenderState) {
         return TEXTURE;
     }
 

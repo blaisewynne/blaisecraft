@@ -26,7 +26,7 @@ public abstract class VampireBaseRenderer<T extends VampireEntity, S extends Vam
         super(context, model, shadowRadius);
     }
 
-    public Identifier getTexture(S zombieEntityRenderState) {
+    public Identifier getTexture(S vampireEntityRenderState) {
         return TEXTURE;
     }
 

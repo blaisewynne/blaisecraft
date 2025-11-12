@@ -1,6 +1,7 @@
 package com.blaisecraft;
 
 import com.blaisecraft.entity.BlaiseCraftEntities;
+import com.blaisecraft.entity.client.animatedarmour.AnimatedArmourRenderer;
 import com.blaisecraft.entity.client.beholder.BeholderRenderer;
 import com.blaisecraft.entity.client.vampire.VampireRenderer;
 import com.blaisecraft.entity.client.werewolf.WerewolfRenderer;
@@ -13,5 +14,6 @@ public class BlaiseCraftClient implements ClientModInitializer {
         EntityRendererRegistry.register(BlaiseCraftEntities.VAMPIRE, VampireRenderer::new);
         EntityRendererRegistry.register(BlaiseCraftEntities.WEREWOLF, WerewolfRenderer::new);
         EntityRendererRegistry.register(BlaiseCraftEntities.BEHOLDER, BeholderRenderer::new);
+        EntityRendererRegistry.register(BlaiseCraftEntities.ANIMATED_ARMOUR, AnimatedArmourRenderer::new);
     }
 }
