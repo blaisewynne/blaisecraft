@@ -8,7 +8,7 @@ import com.blaisecraft.entity.custom.VampireEntity;
 
 
 import com.blaisecraft.entity.custom.WerewolfEntity;
-import com.blaisecraft.items.BlaiseCraftItems;
+
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.entity.EntityType;
 
@@ -32,13 +32,13 @@ import net.minecraft.util.Identifier;
 
 public class BlaiseCraftEntities implements ModInitializer  {
     private static final RegistryKey<EntityType<?>> VAMPIRE_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "vampire"));
-    public static final EntityType<VampireEntity> VAMPIRE = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "vampire"), EntityType.Builder.create(VampireEntity::new, SpawnGroup.MONSTER).dimensions(1f, 2.5f).build(VAMPIRE_KEY));
+    public static final EntityType<VampireEntity> VAMPIRE = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "vampire"), EntityType.Builder.create(VampireEntity::new, SpawnGroup.MONSTER).dimensions(0.6f, 2f).build(VAMPIRE_KEY));
 
     private static final RegistryKey<EntityType<?>> WEREWOLF_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "werewolf"));
-    public static final EntityType<WerewolfEntity> WEREWOLF = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "werewolf"), EntityType.Builder.create(WerewolfEntity::new, SpawnGroup.MONSTER).dimensions(1f, 2.5f).build(WEREWOLF_KEY));
+    public static final EntityType<WerewolfEntity> WEREWOLF = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "werewolf"), EntityType.Builder.create(WerewolfEntity::new, SpawnGroup.MONSTER).dimensions(0.6f, 2f).build(WEREWOLF_KEY));
 
     private static final RegistryKey<EntityType<?>> BEHOLDER_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "beholder"));
-    public static final EntityType<BeholderEntity> BEHOLDER = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "beholder"), EntityType.Builder.create(BeholderEntity::new, SpawnGroup.MONSTER).dimensions(1f, 2.5f).build(BEHOLDER_KEY));
+    public static final EntityType<BeholderEntity> BEHOLDER = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "beholder"), EntityType.Builder.create(BeholderEntity::new, SpawnGroup.MONSTER).dimensions(0.6f, 2f).build(BEHOLDER_KEY));
 
 
     private static final RegistryKey<EntityType<?>> ANIMATED_ARMOUR_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "animated_armour"));

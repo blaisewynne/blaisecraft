@@ -39,7 +39,7 @@ public class VampireEntity extends HostileEntity {
 
     protected void initCustomGoals() {
         this.goalSelector.add(2, new VampireAttackGoal(this, 1.0, false));
-        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0));
+        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0f));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.add(4, new ActiveTargetGoal<>(this, MerchantEntity.class, false));
         this.targetSelector.add(5, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
