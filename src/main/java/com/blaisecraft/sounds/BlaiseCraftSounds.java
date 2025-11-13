@@ -13,6 +13,7 @@ public class BlaiseCraftSounds {
     public static final SoundEvent VAMPIRE_AMBIENT = registerSound("vampire_noise");
     public static final SoundEvent WEREWOLF_AMBIENT = registerSound("werewolf_ambient");
     public static final SoundEvent WEREWOLF_HURT = registerSound("werewolf_hurt");
+    public static final SoundEvent ANIMATED_ARMOUR_AMBIENT = registerSound("animated_armour_ambient");
   
 
     private static SoundEvent registerSound(String id) {

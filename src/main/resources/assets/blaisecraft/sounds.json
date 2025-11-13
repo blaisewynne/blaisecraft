@@ -16,5 +16,11 @@
     "sounds": [
       "blaisecraft:werewolf_hurt"
     ]
+  },
+  "animated_armour_ambient": {
+    "subtitle": "sound.blaisecraft.animated_armour_ambient",
+    "sounds": [
+      "blaisecraft:animated_armour_ambient"
+    ]
   }
 }

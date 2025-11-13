@@ -11,7 +11,6 @@ import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
@@ -74,29 +73,11 @@ public class AnimatedArmourEntity extends HostileEntity {
 
     @Override
     public void tickMovement() {
-        if (this.isAlive()) {
-            boolean bl = this.burnsInDaylight() && this.isAffectedByDaylight();
-            if (bl) {
-                this.setOnFireFor(8.0F);
-            }
-        }
-
         super.tickMovement();
     }
 
-    private boolean burnsInDaylight() {
-        return true;
-    }
+    protected SoundEvent getAmbientSound() { return BlaiseCraftSounds.ANIMATED_ARMOUR_AMBIENT; }
 
-    @Override
-    protected SoundEvent getHurtSound(DamageSource source) {
-        return BlaiseCraftSounds.VAMPIRE_AMBIENT;
-    }
-
-    @Override
-    protected SoundEvent getAmbientSound() {
-        return BlaiseCraftSounds.VAMPIRE_AMBIENT;
-    }
 
     @Override
     public boolean tryAttack(ServerWorld world, Entity target) {
@@ -104,8 +85,7 @@ public class AnimatedArmourEntity extends HostileEntity {
             return false;
         } else {
             if (target instanceof LivingEntity) {
-                ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200), this);
-                ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200), this);
+                ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 100));
             }
 
             return true;
@@ -114,7 +94,7 @@ public class AnimatedArmourEntity extends HostileEntity {
 
     @Override
     protected int getExperienceToDrop(ServerWorld world) {
-        return super.getExperienceToDrop(world);
+        return super.getExperienceToDrop(world) * 2;
     }
 
 }
