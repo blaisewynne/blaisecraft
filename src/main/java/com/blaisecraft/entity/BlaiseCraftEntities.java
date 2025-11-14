@@ -42,7 +42,7 @@ public class BlaiseCraftEntities implements ModInitializer  {
 
 
     private static final RegistryKey<EntityType<?>> ANIMATED_ARMOUR_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "animated_armour"));
-    public static final EntityType<AnimatedArmourEntity> ANIMATED_ARMOUR = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "animated_armour"), EntityType.Builder.create(AnimatedArmourEntity::new, SpawnGroup.MONSTER).dimensions(1f, 2.5f).build(ANIMATED_ARMOUR_KEY));
+    public static final EntityType<AnimatedArmourEntity> ANIMATED_ARMOUR = Registry.register(Registries.ENTITY_TYPE, Identifier.of(BlaiseCraft.MOD_ID, "animated_armour"), EntityType.Builder.create(AnimatedArmourEntity::new, SpawnGroup.MONSTER).dimensions(0.6f, 2.5f).build(ANIMATED_ARMOUR_KEY));
 
     @Override
     public void onInitialize() {

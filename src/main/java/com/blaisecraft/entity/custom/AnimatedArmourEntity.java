@@ -10,7 +10,6 @@ import net.minecraft.entity.ai.goal.ActiveTargetGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.ai.goal.WanderAroundGoal;
-import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -22,7 +21,6 @@ import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 
 public class AnimatedArmourEntity extends HostileEntity {
@@ -40,7 +38,7 @@ public class AnimatedArmourEntity extends HostileEntity {
 
     protected void initCustomGoals() {
         this.goalSelector.add(2, new AnimatedArmourAttackGoal(this, 1.0, false));
-        this.goalSelector.add(3, new WanderAroundGoal(this, 1.0, 1, true));
+        this.goalSelector.add(3, new WanderAroundGoal(this, 0.9f, 1, true));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0f));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.add(4, new ActiveTargetGoal<>(this, MerchantEntity.class, false));
@@ -51,10 +49,11 @@ public class AnimatedArmourEntity extends HostileEntity {
     public static DefaultAttributeContainer.Builder createAttributes() {
         return HostileEntity.createHostileAttributes()
                 .add(EntityAttributes.FOLLOW_RANGE, 100.0)
-                .add(EntityAttributes.MOVEMENT_SPEED, 0.35f)
-                .add(EntityAttributes.ATTACK_DAMAGE, 6.0)
-                .add(EntityAttributes.ARMOR, 8.0)
-                .add(EntityAttributes.JUMP_STRENGTH, 0.6f)
+                .add(EntityAttributes.MOVEMENT_SPEED, 0.2f)
+                .add(EntityAttributes.ATTACK_DAMAGE, 8.0)
+                .add(EntityAttributes.ARMOR, 12.0)
+                .add(EntityAttributes.JUMP_STRENGTH, 0.2f)
+                .add(EntityAttributes.MAX_HEALTH, 1)
                 .add(EntityAttributes.SPAWN_REINFORCEMENTS);
     }
 
