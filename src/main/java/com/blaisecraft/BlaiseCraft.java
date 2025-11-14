@@ -11,7 +11,6 @@ import com.blaisecraft.items.BlaiseCraftItems;
 import com.blaisecraft.items.BlaiseCraftPotions;
 import com.blaisecraft.sounds.BlaiseCraftSounds;
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.text.Text;

@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "type": "minecraft:item",
+            "functions": [
+                {
+                    
+                }
+            ]
+        }
+    ]
+}
