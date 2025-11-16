@@ -53,7 +53,7 @@ public class AnimatedArmourEntity extends HostileEntity {
                 .add(EntityAttributes.ATTACK_DAMAGE, 8.0)
                 .add(EntityAttributes.ARMOR, 12.0)
                 .add(EntityAttributes.JUMP_STRENGTH, 0.2f)
-                .add(EntityAttributes.MAX_HEALTH, 1)
+                .add(EntityAttributes.MAX_HEALTH, 50)
                 .add(EntityAttributes.SPAWN_REINFORCEMENTS);
     }
 

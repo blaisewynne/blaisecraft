@@ -6,14 +6,15 @@ import com.blaisecraft.entity.client.beholder.BeholderRenderer;
 import com.blaisecraft.entity.client.vampire.VampireRenderer;
 import com.blaisecraft.entity.client.werewolf.WerewolfRenderer;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+
+import static net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry.*;
 
 public class BlaiseCraftClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        EntityRendererRegistry.register(BlaiseCraftEntities.VAMPIRE, VampireRenderer::new);
-        EntityRendererRegistry.register(BlaiseCraftEntities.WEREWOLF, WerewolfRenderer::new);
-        EntityRendererRegistry.register(BlaiseCraftEntities.BEHOLDER, BeholderRenderer::new);
-        EntityRendererRegistry.register(BlaiseCraftEntities.ANIMATED_ARMOUR, AnimatedArmourRenderer::new);
+        register(BlaiseCraftEntities.VAMPIRE, VampireRenderer::new);
+        register(BlaiseCraftEntities.WEREWOLF, WerewolfRenderer::new);
+        register(BlaiseCraftEntities.BEHOLDER, BeholderRenderer::new);
+        register(BlaiseCraftEntities.ANIMATED_ARMOUR, AnimatedArmourRenderer::new);
     }
 }
