@@ -33,12 +33,14 @@ public class BlaiseCraftItems {
     public static final ConsumableComponent BLOOD_CONSUMABLE = ConsumableComponents.food().consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(BlaiseCraftEffects.VAMPIRE, Integer.MAX_VALUE, 0), 1)).build();
     public static final FoodComponent BLOOD_FOOD = new FoodComponent.Builder().alwaysEdible().saturationModifier(8).build();
     public static final Item BLOOD_ITEM = register("blood_item", Item::new, new Item.Settings().food(BLOOD_FOOD, BLOOD_CONSUMABLE).maxCount(16));
+    public static final Item ANIMATED_INGOT = register("animated_ingot", Item::new, new Item.Settings().maxCount(64));
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL)
                 .register((entries) -> {
                     entries.add(LABUBU_ITEM);
                     entries.add(BLOOD_ITEM);
+                    entries.add(ANIMATED_INGOT);
                 });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
                 .register((entries) -> {

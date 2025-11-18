@@ -1,33 +1,16 @@
 package com.blaisecraft.entity;
 import com.blaisecraft.BlaiseCraft;
-
-
 import com.blaisecraft.entity.custom.AnimatedArmourEntity;
 import com.blaisecraft.entity.custom.BeholderEntity;
 import com.blaisecraft.entity.custom.VampireEntity;
-
-
 import com.blaisecraft.entity.custom.WerewolfEntity;
-
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.entity.EntityType;
-
-
 import net.minecraft.entity.SpawnGroup;
-
-
 import net.minecraft.registry.Registries;
-
-
 import net.minecraft.registry.Registry;
-
-
 import net.minecraft.registry.RegistryKey;
-
-
 import net.minecraft.registry.RegistryKeys;
-
-
 import net.minecraft.util.Identifier;
 
 public class BlaiseCraftEntities implements ModInitializer  {

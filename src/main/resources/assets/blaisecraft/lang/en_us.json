@@ -16,5 +16,7 @@
   "sound.blaisecraft.werewolf_ambient": "Werewolf Growl",
   "sound.blaisecraft.werewolf_hurt": "Werewolf Hurt",
   "entity.blaisecraft.animated_armour": "Animated Armour",
-  "sound.blaisecraft.animated_armour_ambient": "Armour Clinking"
+  "sound.blaisecraft.animated_armour_ambient": "Armour Clinking",
+  "item.blaisecraft.animated_ingot": "Animated Ingot",
+  "item.blaisecraft.animated_ingot.tooltip": "You feel it moving in your hand."
 }
