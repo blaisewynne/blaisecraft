@@ -1,5 +1,5 @@
 # Blaisecraft
-The mod current adds all sort of random items to the game. Such as:
+The mod current adds all sort of random items to the game for Minecraft 1.21.10, such as:
 
 #### - Labubu
 #### - Vampirism
