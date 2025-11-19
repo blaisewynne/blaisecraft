@@ -17,6 +17,8 @@
   "sound.blaisecraft.werewolf_hurt": "Werewolf Hurt",
   "entity.blaisecraft.animated_armour": "Animated Armour",
   "sound.blaisecraft.animated_armour_ambient": "Armour Clinking",
+  "item.blaisecraft.animated_scrap": "Animated Scrap",
+  "item.blaisecraft.animated_scrap.tooltip": "A fragment of an animated armour, it can be re-smelted.",
   "item.blaisecraft.animated_ingot": "Animated Ingot",
   "item.blaisecraft.animated_ingot.tooltip": "You feel it moving in your hand."
 }

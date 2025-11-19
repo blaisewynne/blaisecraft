@@ -17,6 +17,7 @@ public class BlaiseCraftGroup {
                     .entries((displayContext, entries) -> {
                         entries.add(BlaiseCraftItems.LABUBU_ITEM);
                         entries.add(BlaiseCraftItems.BLOOD_ITEM);
+                        entries.add(BlaiseCraftItems.ANIMATED_SCRAP);
                         entries.add(BlaiseCraftItems.ANIMATED_INGOT);
                     })
                     .build());

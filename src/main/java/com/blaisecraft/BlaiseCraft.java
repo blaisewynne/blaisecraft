@@ -41,6 +41,12 @@ public class BlaiseCraft implements ModInitializer {
             list.add(Text.translatable("item.blaisecraft.blood_item.tooltip").formatted(Formatting.RED, Formatting.BOLD));
         });
         ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
+            if (!itemStack.isOf(BlaiseCraftItems.ANIMATED_SCRAP)) {
+                return;
+            }
+            list.add(Text.translatable("item.blaisecraft.animated_scrap.tooltip").formatted(Formatting.DARK_PURPLE, Formatting.ITALIC));
+        });
+        ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
             if (!itemStack.isOf(BlaiseCraftItems.ANIMATED_INGOT)) {
                 return;
             }

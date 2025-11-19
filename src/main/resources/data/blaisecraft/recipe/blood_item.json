@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "-",
+  "category": "equipment",
+  "pattern": [
+    "F",
+    "F",
+    "W"
+  ],
+  "key": {
+    "W": [
+      "minecraft:stick"
+    ],
+    "F": [
+      "blaisecraft:animated_ingot"
+    ]
+  },
+  "result": {
+    "id": "blaisecraft:blood_item"
+  },
+  "show_notification": true
+}

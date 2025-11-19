@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "blaisecraft:animated_scrap",
+  "result": {
+    "id": "blaisecraft:animated_ingot"
+  },
+  "experience": 0.4,
+  "cookingtime": 200
+}
