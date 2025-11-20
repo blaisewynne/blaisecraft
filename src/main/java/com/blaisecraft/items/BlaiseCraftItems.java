@@ -22,19 +22,25 @@ import net.minecraft.util.Rarity;
 import java.util.function.Function;
 
 public class BlaiseCraftItems {
-    public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
-        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BlaiseCraft.MOD_ID, name));
-        Item item = itemFactory.apply(settings.registryKey(itemKey));
-        Registry.register(Registries.ITEM, itemKey, item);
-        return item;
+    private static Item register(String name, Function<Item.Settings, Item> function) {
+        return Registry.register(Registries.ITEM, Identifier.of(BlaiseCraft.MOD_ID, name),
+                function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BlaiseCraft.MOD_ID, name)))));
     }
-
-    public static final Item LABUBU_ITEM = register("labubu_item", Item::new, new Item.Settings().maxCount(1).rarity(Rarity.RARE));
+    public static final Item LABUBU_ITEM = register("labubu_item", settings -> new Item(settings.maxCount(1).rarity(Rarity.EPIC)));
     public static final ConsumableComponent BLOOD_CONSUMABLE = ConsumableComponents.food().consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(BlaiseCraftEffects.VAMPIRE, Integer.MAX_VALUE, 0), 1)).build();
     public static final FoodComponent BLOOD_FOOD = new FoodComponent.Builder().alwaysEdible().saturationModifier(8).build();
-    public static final Item BLOOD_ITEM = register("blood_item", Item::new, new Item.Settings().food(BLOOD_FOOD, BLOOD_CONSUMABLE).maxCount(16));
-    public static final Item ANIMATED_SCRAP = register("animated_scrap", Item::new, new Item.Settings().maxCount(64));
-    public static final Item ANIMATED_INGOT = register("animated_ingot", Item::new, new Item.Settings().maxCount(64));
+    public static final Item BLOOD_ITEM = register("blood_item", settings -> new Item(settings.food(BLOOD_FOOD, BLOOD_CONSUMABLE).maxCount(16)));
+    public static final Item ANIMATED_SCRAP = register("animated_scrap", settings -> new Item(settings.maxCount(64)));
+    public static final Item ANIMATED_INGOT = register("animated_ingot", settings -> new Item(settings.maxCount(64)));
+
+    public static final Item VAMPIRE_SPAWN_EGG = register("vampire_spawn_egg",
+            setting -> new SpawnEggItem(setting.spawnEgg(BlaiseCraftEntities.VAMPIRE)));
+
+    public static final Item WEREWOLF_SPAWN_EGG = register("werewolf_spawn_egg",
+            setting -> new SpawnEggItem(setting.spawnEgg(BlaiseCraftEntities.WEREWOLF)));
+
+    public static final Item ANIMATED_ARMOUR_SPAWN_EGG = register("animated_armour_spawn_egg",
+            setting -> new SpawnEggItem(setting.spawnEgg(BlaiseCraftEntities.ANIMATED_ARMOUR)));
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL)
@@ -47,6 +53,12 @@ public class BlaiseCraftItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
                 .register((entries) -> {
 
+                });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS)
+                .register(entries -> {
+                    entries.add(VAMPIRE_SPAWN_EGG);
+                    entries.add(WEREWOLF_SPAWN_EGG);
+                    entries.add(ANIMATED_ARMOUR_SPAWN_EGG); 
                 });
     }
 }
