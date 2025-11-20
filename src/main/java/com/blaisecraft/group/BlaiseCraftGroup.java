@@ -19,6 +19,9 @@ public class BlaiseCraftGroup {
                         entries.add(BlaiseCraftItems.BLOOD_ITEM);
                         entries.add(BlaiseCraftItems.ANIMATED_SCRAP);
                         entries.add(BlaiseCraftItems.ANIMATED_INGOT);
+                        entries.add(BlaiseCraftItems.ANIMATED_ARMOUR_SPAWN_EGG);
+                        entries.add(BlaiseCraftItems.WEREWOLF_SPAWN_EGG);
+                        entries.add(BlaiseCraftItems.VAMPIRE_SPAWN_EGG);
                     })
                     .build());
     public static void registerBlaiseCraftGroups() {

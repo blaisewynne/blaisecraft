@@ -42,6 +42,9 @@ public class BlaiseCraftItems {
     public static final Item ANIMATED_ARMOUR_SPAWN_EGG = register("animated_armour_spawn_egg",
             setting -> new SpawnEggItem(setting.spawnEgg(BlaiseCraftEntities.ANIMATED_ARMOUR)));
 
+    public static final Item BEHOLDER_SPAWN_EGG = register("beholder_spawn_egg",
+            setting -> new SpawnEggItem(setting.spawnEgg(BlaiseCraftEntities.BEHOLDER)));
+
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL)
                 .register((entries) -> {
@@ -58,7 +61,8 @@ public class BlaiseCraftItems {
                 .register(entries -> {
                     entries.add(VAMPIRE_SPAWN_EGG);
                     entries.add(WEREWOLF_SPAWN_EGG);
-                    entries.add(ANIMATED_ARMOUR_SPAWN_EGG); 
+                    entries.add(ANIMATED_ARMOUR_SPAWN_EGG);
+                    entries.add(BEHOLDER_SPAWN_EGG);
                 });
     }
 }

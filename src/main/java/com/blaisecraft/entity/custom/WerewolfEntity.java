@@ -1,5 +1,6 @@
 package com.blaisecraft.entity.custom;
 
+import com.blaisecraft.effects.BlaiseCraftEffects;
 import com.blaisecraft.entity.ai.WerewolfAttackGoal;
 import com.blaisecraft.sounds.BlaiseCraftSounds;
 import net.minecraft.entity.AnimationState;
@@ -21,6 +22,7 @@ import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class WerewolfEntity extends HostileEntity {
@@ -98,13 +100,21 @@ public class WerewolfEntity extends HostileEntity {
         return BlaiseCraftSounds.WEREWOLF_AMBIENT;
     }
 
+    public int getRandomNumber() {
+        return (int) ((Math.random() * (10 - 1)) + 1);
+    }
+
     @Override
     public boolean tryAttack(ServerWorld world, Entity target) {
         if (!super.tryAttack(world, target)) {
             return false;
         } else {
             if (target instanceof LivingEntity) {
+                int lycanthropy_chance = getRandomNumber();
                 ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200), this);
+                if (lycanthropy_chance == 1) {
+                    ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(BlaiseCraftEffects.WEREWOLF, 20000), this);
+                }
             }
 
             return true;

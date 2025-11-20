@@ -2,6 +2,7 @@ package com.blaisecraft.entity.custom;
 
 import com.blaisecraft.entity.ai.AnimatedArmourAttackGoal;
 import com.blaisecraft.sounds.BlaiseCraftSounds;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -21,6 +22,7 @@ import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class AnimatedArmourEntity extends HostileEntity {
@@ -52,7 +54,7 @@ public class AnimatedArmourEntity extends HostileEntity {
                 .add(EntityAttributes.MOVEMENT_SPEED, 0.2f)
                 .add(EntityAttributes.ATTACK_DAMAGE, 8.0)
                 .add(EntityAttributes.ARMOR, 12.0)
-                .add(EntityAttributes.JUMP_STRENGTH, 0.2f)
+                .add(EntityAttributes.JUMP_STRENGTH, 0.4f)
                 .add(EntityAttributes.MAX_HEALTH, 50)
                 .add(EntityAttributes.SPAWN_REINFORCEMENTS);
     }
@@ -92,8 +94,13 @@ public class AnimatedArmourEntity extends HostileEntity {
         }
     }
 
+    protected SoundEvent getStepSound() {
+        return BlaiseCraftSounds.ANIMATED_ARMOUR_AMBIENT;
+    }
     @Override
-    protected SoundEvent getAmbientSound() { return BlaiseCraftSounds.ANIMATED_ARMOUR_AMBIENT; }
+    protected void playStepSound(BlockPos pos, BlockState state) {
+        this.playSound(this.getStepSound(), 0.15F, 1.0F);
+    }
 
     @Override
     protected int getExperienceToDrop(ServerWorld world) {
