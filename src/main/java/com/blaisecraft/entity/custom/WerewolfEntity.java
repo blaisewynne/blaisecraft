@@ -100,7 +100,7 @@ public class WerewolfEntity extends HostileEntity {
         return BlaiseCraftSounds.WEREWOLF_AMBIENT;
     }
 
-    public int getRandomNumber() {
+    private int getRandomNumber() {
         return (int) ((Math.random() * (10 - 1)) + 1);
     }
 

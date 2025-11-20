@@ -20,5 +20,9 @@
   "item.blaisecraft.animated_scrap": "Animated Scrap",
   "item.blaisecraft.animated_scrap.tooltip": "A fragment of an animated armour, it can be re-smelted.",
   "item.blaisecraft.animated_ingot": "Animated Ingot",
-  "item.blaisecraft.animated_ingot.tooltip": "You feel it moving in your hand."
+  "item.blaisecraft.animated_ingot.tooltip": "You feel it moving in your hand.",
+  "death.attack.vampire_burning": "%1$s had their skin melted off by running water!",
+  "item.blaisecraft.vampire_spawn_egg": "Vampire Spawn Egg",
+  "item.blaisecraft.werewolf_spawn_egg": "Werewolf Spawn Egg",
+  "item.blaisecraft.animated_armour_spawn_egg": "Animated Armour Spawn Egg"
 }

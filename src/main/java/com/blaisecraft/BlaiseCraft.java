@@ -13,16 +13,18 @@ import com.blaisecraft.sounds.BlaiseCraftSounds;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.entity.damage.DamageType;
+import net.minecraft.registry.Registries;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class BlaiseCraft implements ModInitializer {
 	public static final String MOD_ID = "blaisecraft";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
-	@Override
+    @Override
 	public void onInitialize() {
         BlaiseCraftGroup.registerBlaiseCraftGroups();
         BlaiseCraftItems.initialize();
@@ -52,6 +54,9 @@ public class BlaiseCraft implements ModInitializer {
             }
             list.add(Text.translatable("item.blaisecraft.animated_ingot.tooltip").formatted(Formatting.DARK_PURPLE, Formatting.ITALIC));
         });
+
+
+
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.VAMPIRE, VampireEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.WEREWOLF, WerewolfEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(BlaiseCraftEntities.BEHOLDER, BeholderEntity.createAttributes());
