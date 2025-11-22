@@ -7,23 +7,14 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageType;
-import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.Objects;
-
-import static net.minecraft.registry.RegistryKeys.DAMAGE_TYPE;
 
 public class VampireEffect extends StatusEffect {
     private static final Identifier SPEED_ID = Identifier.of(BlaiseCraft.MOD_ID, "vampire");
@@ -56,7 +47,7 @@ public class VampireEffect extends StatusEffect {
             BlockState state =  (entity).getEntityWorld().getBlockState(entity.getBlockPos());
             for (int i = 1; i < 10; i++) {
                 if (Objects.equals(state.toString(), String.format("Block{minecraft:water}[level=%d]", i))) {
-                    entity.damage(serverWorld, damageSource, 5.0f);
+                    entity.damage(serverWorld, damageSource, 2.0f);
                 }
             }
         }
